@@ -30,7 +30,7 @@
 ```diff
 + 在github上手动创建一个新的respository,这时会返回一个远程git仓库链接XXX，如http://.../XX.git
 ```
-`$ git remote add origin [分支]` "xxx"是你得到的链接url，remote是指远程git仓库
+`$ git remote add origin xxx` "xxx"是你得到的链接url，remote是指远程git仓库
 
 `$ git push -u origin [分支]` 将本地仓库推送到远端，-u表示的是让文件以流的方式上传
 
