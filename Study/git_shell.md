@@ -26,19 +26,22 @@
 将变化后的文件提交到本地仓库，一般在后面加上一些标注，表示本次的变动信息。
 
 ### 3.创建好本地仓库后，开始上传到github
-<font color='red'>在github上手动创建一个新的respository</font>，这时会返回一个远程git仓库链接XXX，如http://.../XX.git
+
+```diff
++ 在github上手动创建一个新的respository,这时会返回一个远程git仓库链接XXX，如http://.../XX.git
 
 `$ git remote add origin [分支]` "xxx"是你得到的链接url，remote是指远程git仓库
 
 `$ git push -u origin [分支]` 将本地仓库推送到远端，-u表示的是让文件以流的方式上传
 
 刷新github页面后可以看到本地git仓库已经成功上传。
+```
 
-> **如果需要想要推送的是一个现有仓库的新分支（remote不存在的分支），应该怎么办？**
-> - 首先，在本地创建新分支，然后推送的远端<br>
-> `git checkout -b 1.0.1` #检测有没有分支1.0.1，如果没有就创建，再切换到该分支下面<br>
-> `git branch` #查看当前分支情况，（*）表示该分支时当前分支<br>
-> `git push -u origin 1.0.1` #其中origin已经被指定为上文的git地址<br>
+**如果需要想要推送的是一个现有仓库的新分支（remote不存在的分支），应该怎么办？**
+在本地创建新分支，然后推送的远端<br>
+`git checkout -b 1.0.1` #检测有没有分支1.0.1，如果没有就创建，再切换到该分支下面<br>
+`git branch` #查看当前分支情况，（*）表示该分支时当前分支<br>
+`git push -u origin 1.0.1` #其中origin已经被指定为上文的git地址<br>
 
 ## 2.2 git命令合并分支代码
 **对于复杂的系统，我们可能要开好几个分支来开发，那么怎样使用git合并分支呢？**<br>
