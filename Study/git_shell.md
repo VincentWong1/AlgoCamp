@@ -61,18 +61,21 @@ git merge 分支
 git push
 复制
 ```
+补充情况
 
-- 4、查看合并之后的状态<br>
-`$ git status #会显示该分支提交了多少commits`<br>
-- 5、有冲突的话，通过IDE解决冲突。 <br>
-- 6、解决冲突之后，将冲突文件提交暂存区<br>
-`$ git add` 冲突文件<br>
-- 7、提交merge之后的结果<br>
-`$ git commit`<br>
-如果不是使用git commit -m "备注" ，那么git会自动将合并的结果作为备注，提交本地仓库；<br>
-- 8、本地仓库代码提交远程仓库，完成更新<br>
-`$ git push origin master` git将分支合并到分支，将master合并到分支的操作步骤是一样的。<br>
-也可以用`git checrry-pick commitid`合并<br>
+```shell
+4、查看合并之后的状态<
+`$ git status #会显示该分支提交了多少commits`
+5、有冲突的话，通过IDE解决冲突。 
+6、解决冲突之后，将冲突文件提交暂存区
+`$ git add` 冲突文件
+7、提交merge之后的结果
+`$ git commit`
+如果不是使用git commit -m "备注" ，那么git会自动将合并的结果作为备注，提交本地仓库；
+8、本地仓库代码提交远程仓库，完成更新
+`$ git push origin master` git将分支合并到分支，将master合并到分支的操作步骤是一样的。
+也可以用`git checrry-pick commitid`合并
+```
 
 ## 2.3 删除远程分支
 - 方法1. 推送一个空分支到远程分支，其实就相当于删除远程分支：
