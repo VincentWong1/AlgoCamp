@@ -44,15 +44,24 @@
 `git push -u origin 1.0.1` #其中origin已经被指定为上文的git地址<br>
 
 ## 2.2 git命令合并分支代码
-**对于复杂的系统，我们可能要开好几个分支来开发，那么怎样使用git合并分支呢？**<br>
-合并步骤：
-- 1、进入要合并的分支（如开发分支合并到master，则进入master目录）<br>
-`$ git checkout master` #切换当前分支到master分支<br>
-`$ git pull origin master`<br>
-- 2、查看所有分支是否都pull下来了<br>
-`$ git branch -a`<br>
-- 3、使用merge合并开发分支<br>
-`$ git merge [分支]`<br>
+```shell
+1.首先切换到分支
+git checkout 分支
+复制
+2.使用git pull 把分支代码pull下来
+git pull
+复制
+3.切换到主分支
+git checkout master
+复制
+4.把分支的代码merge到主分支
+git merge 分支
+复制
+5.git push推上去ok完成,现在 你自己分支的代码就合并到主分支上了
+git push
+复制
+```
+
 - 4、查看合并之后的状态<br>
 `$ git status #会显示该分支提交了多少commits`<br>
 - 5、有冲突的话，通过IDE解决冲突。 <br>
