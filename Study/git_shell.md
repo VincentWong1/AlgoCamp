@@ -29,13 +29,13 @@
 
 ```diff
 + 在github上手动创建一个新的respository,这时会返回一个远程git仓库链接XXX，如http://.../XX.git
-
+```
 `$ git remote add origin [分支]` "xxx"是你得到的链接url，remote是指远程git仓库
 
 `$ git push -u origin [分支]` 将本地仓库推送到远端，-u表示的是让文件以流的方式上传
 
 刷新github页面后可以看到本地git仓库已经成功上传。
-```
+
 
 **如果需要想要推送的是一个现有仓库的新分支（remote不存在的分支），应该怎么办？**
 在本地创建新分支，然后推送的远端<br>
